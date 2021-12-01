@@ -7,6 +7,6 @@ int main(int argc,char *argv[])
     pid_t id;
     printf("before fork\n");
     id = fork();
-    printf("after fork\n");
+    printf("after fork:%d\n",id);
     return 0;
 }
