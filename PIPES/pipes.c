@@ -14,18 +14,20 @@ int main(int argc, char const *argv[])
     id = fork();
     if (0 == id)
     {
+       close(fd[0]);
        printf("child: Reading data\n");
        read(fd[0], buff, 16);
        printf("child Read: %s\n",buff);
     }
     else
     {
+        close(fd[1]);
         printf("parent: writing data\n");
         write(fd[1],"DESD\n)", 5);
         printf("parent: writing done\n");
     }
  // pipe is tch. that is used to communicate between parent and child process
- 
+
 return 0;
 
 }
