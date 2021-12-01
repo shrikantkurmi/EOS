@@ -2,7 +2,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-int main(int argc, char *argv[])
+int main(int argc, char cnonst *argv[])
 {
     pid_t id;
     printf("before fork\n");
