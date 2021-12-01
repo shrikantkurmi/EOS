@@ -24,7 +24,8 @@ int main(int argc, char const *argv[])
         write(fd[1],"DESD\n)", 5);
         printf("parent: writing done\n");
     }
-
+ // pipe is tch. that is used to communicate between parent and child process
+ 
 return 0;
 
 }
